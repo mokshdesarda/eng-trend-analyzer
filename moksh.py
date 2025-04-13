@@ -136,7 +136,7 @@ def generate_summary(topic):
 
 # Main app function
 def main():
-    st.title("📰 Global News Summarizer")
+    st.title("📰 Global Trend Summarizer")
     
     st.markdown("""
     This app searches for the latest news from multiple sources (BBC, CNN, NBC News, 
@@ -194,11 +194,12 @@ def main():
                 
                 # Add timestamp
                 st.markdown(f"**Generated on**: {time.strftime('%Y-%m-%d %H:%M:%S')}")
-                st.markdown("---\nCreated by Moksh Desarda")
+                
         except Exception as e:
             progress_bar.progress(100)
             status_text.text("An error occurred")
             st.error(f"Error: {str(e)}")
-
+    st.markdown("---\nCreated by Moksh Desarda")
+    
 if __name__ == "__main__":
     main()
