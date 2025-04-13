@@ -12,7 +12,7 @@ import google.generativeai as genai
 
 # Set page configuration
 st.set_page_config(
-    page_title="Global News Summarizer",
+    page_title="Global Trend Summarizer",
     page_icon="📰",
     layout="wide",
 )
@@ -194,7 +194,7 @@ def main():
                 
                 # Add timestamp
                 st.markdown(f"**Generated on**: {time.strftime('%Y-%m-%d %H:%M:%S')}")
-        
+                st.markdown("---\nCreated by Moksh Desarda")
         except Exception as e:
             progress_bar.progress(100)
             status_text.text("An error occurred")
