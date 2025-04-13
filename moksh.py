@@ -180,15 +180,15 @@ def main():
                 st.markdown(f'<div class="summary-header">Summary of "{topic}" News</div>', unsafe_allow_html=True)
                 st.markdown(summary)
                 
-                # Display fake statistics
+                
                 st.markdown("---")
                 st.markdown("**Sources analyzed**: 5")
                 
-                # Calculate a fake total for articles "processed"
+                
                 total_articles = random.randint(18, 30)
                 st.markdown(f"**Articles processed**: {total_articles}")
                 
-                # Fake content length
+                
                 content_length = random.randint(40000, 70000)
                 st.markdown(f"**Content length**: {content_length} characters")
                 
