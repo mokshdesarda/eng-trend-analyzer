@@ -13,6 +13,7 @@ command = ["playwright", "install"]
 try:
     # Execute the command
     result = subprocess.run(command, check=True)
+    result = subprocess.run(["sudo", "playwright", "install-deps"], check=True)
     print("Playwright browser binaries installed successfully.")
 except subprocess.CalledProcessError as e:
     print(f"Failed to install Playwright browser binaries: {e}")
