@@ -5,6 +5,18 @@ import asyncio
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
+import subprocess
+
+# Command to install Playwright browser binaries
+command = ["playwright", "install"]
+
+try:
+    # Execute the command
+    result = subprocess.run(command, check=True)
+    print("Playwright browser binaries installed successfully.")
+except subprocess.CalledProcessError as e:
+    print(f"Failed to install Playwright browser binaries: {e}")
+
 import streamlit as st
 import time
 import os
